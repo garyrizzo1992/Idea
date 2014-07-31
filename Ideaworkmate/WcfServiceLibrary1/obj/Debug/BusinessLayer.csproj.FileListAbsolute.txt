@@ -1,0 +1,8 @@
+C:\Users\Gary\documents\visual studio 2013\Projects\Ideaworkmate\WcfServiceLibrary1\bin\Debug\WcfServiceLibrary1.dll.config
+C:\Users\Gary\documents\visual studio 2013\Projects\Ideaworkmate\WcfServiceLibrary1\bin\Debug\WcfServiceLibrary1.dll
+C:\Users\Gary\documents\visual studio 2013\Projects\Ideaworkmate\WcfServiceLibrary1\bin\Debug\WcfServiceLibrary1.pdb
+C:\Users\Gary\documents\visual studio 2013\Projects\Ideaworkmate\WcfServiceLibrary1\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Users\Gary\documents\visual studio 2013\Projects\Ideaworkmate\WcfServiceLibrary1\obj\Debug\WcfServiceLibrary1.dll
+C:\Users\Gary\documents\visual studio 2013\Projects\Ideaworkmate\WcfServiceLibrary1\obj\Debug\WcfServiceLibrary1.pdb
+C:\Users\Gary\documents\visual studio 2013\Projects\Ideaworkmate\WcfServiceLibrary1\bin\Debug\WcfServiceLibrary1.dll.CodeAnalysisLog.xml
+C:\Users\Gary\documents\visual studio 2013\Projects\Ideaworkmate\WcfServiceLibrary1\bin\Debug\WcfServiceLibrary1.dll.lastcodeanalysissucceeded
