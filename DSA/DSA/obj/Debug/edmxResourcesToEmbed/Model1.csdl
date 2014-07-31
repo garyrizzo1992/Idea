@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DSAModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="DSAEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Accounts" EntityType="DSAModel.Account" />
+    <EntitySet Name="AccountTypes" EntityType="DSAModel.AccountType" />
+    <EntitySet Name="Appointments" EntityType="DSAModel.Appointment" />
+    <EntitySet Name="Countries" EntityType="DSAModel.Country" />
+    <EntitySet Name="Currencies" EntityType="DSAModel.Currency" />
+    <EntitySet Name="FixedRates" EntityType="DSAModel.FixedRate" />
+    <EntitySet Name="Towns" EntityType="DSAModel.Town" />
+    <EntitySet Name="Transactions" EntityType="DSAModel.Transaction" />
+    <EntitySet Name="UserRoles" EntityType="DSAModel.UserRole" />
+    <EntitySet Name="Users" EntityType="DSAModel.User" />
+    <AssociationSet Name="FK_Accounts_AccountTypes" Association="DSAModel.FK_Accounts_AccountTypes">
+      <End Role="AccountTypes" EntitySet="AccountTypes" />
+      <End Role="Accounts" EntitySet="Accounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Accounts_Currencies" Association="DSAModel.FK_Accounts_Currencies">
+      <End Role="Currencies" EntitySet="Currencies" />
+      <End Role="Accounts" EntitySet="Accounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Accounts_FixedRates" Association="DSAModel.FK_Accounts_FixedRates">
+      <End Role="FixedRates" EntitySet="FixedRates" />
+      <End Role="Accounts" EntitySet="Accounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transactions_Accounts" Association="DSAModel.FK_Transactions_Accounts">
+      <End Role="Accounts" EntitySet="Accounts" />
+      <End Role="Transactions" EntitySet="Transactions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Accounts" Association="DSAModel.FK_Users_Accounts">
+      <End Role="Accounts" EntitySet="Accounts" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Appointments" Association="DSAModel.FK_Users_Appointments">
+      <End Role="Appointments" EntitySet="Appointments" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Towns_Countries" Association="DSAModel.FK_Towns_Countries">
+      <End Role="Countries" EntitySet="Countries" />
+      <End Role="Towns" EntitySet="Towns" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Towns" Association="DSAModel.FK_Users_Towns">
+      <End Role="Towns" EntitySet="Towns" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_UserRoles" Association="DSAModel.FK_Users_UserRoles">
+      <End Role="UserRoles" EntitySet="UserRoles" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="AccountID" />
+    </Key>
+    <Property Name="AccountID" Type="Int32" Nullable="false" />
+    <Property Name="AccountTypeID" Type="Int32" />
+    <Property Name="AccountFriendlyName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="CurrencyID" Type="Int32" />
+    <Property Name="Balance" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="FixedRateID" Type="Int32" />
+    <NavigationProperty Name="AccountType" Relationship="DSAModel.FK_Accounts_AccountTypes" FromRole="Accounts" ToRole="AccountTypes" />
+    <NavigationProperty Name="Currency" Relationship="DSAModel.FK_Accounts_Currencies" FromRole="Accounts" ToRole="Currencies" />
+    <NavigationProperty Name="FixedRate" Relationship="DSAModel.FK_Accounts_FixedRates" FromRole="Accounts" ToRole="FixedRates" />
+    <NavigationProperty Name="Transactions" Relationship="DSAModel.FK_Transactions_Accounts" FromRole="Accounts" ToRole="Transactions" />
+    <NavigationProperty Name="Users" Relationship="DSAModel.FK_Users_Accounts" FromRole="Accounts" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="AccountType">
+    <Key>
+      <PropertyRef Name="AccountTypeID" />
+    </Key>
+    <Property Name="AccountTypeID" Type="Int32" Nullable="false" />
+    <Property Name="AccountType1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Accounts" Relationship="DSAModel.FK_Accounts_AccountTypes" FromRole="AccountTypes" ToRole="Accounts" />
+  </EntityType>
+  <EntityType Name="Appointment">
+    <Key>
+      <PropertyRef Name="AppointmentID" />
+    </Key>
+    <Property Name="AppointmentID" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" />
+    <Property Name="Description" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Status" Type="Boolean" />
+    <NavigationProperty Name="Users" Relationship="DSAModel.FK_Users_Appointments" FromRole="Appointments" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="CountryID" />
+    </Key>
+    <Property Name="CountryID" Type="Int32" Nullable="false" />
+    <Property Name="Country1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Towns" Relationship="DSAModel.FK_Towns_Countries" FromRole="Countries" ToRole="Towns" />
+  </EntityType>
+  <EntityType Name="Currency">
+    <Key>
+      <PropertyRef Name="CurrencyID" />
+    </Key>
+    <Property Name="CurrencyID" Type="Int32" Nullable="false" />
+    <Property Name="Currency1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Accounts" Relationship="DSAModel.FK_Accounts_Currencies" FromRole="Currencies" ToRole="Accounts" />
+  </EntityType>
+  <EntityType Name="FixedRate">
+    <Key>
+      <PropertyRef Name="FixedRateID" />
+    </Key>
+    <Property Name="FixedRateID" Type="Int32" Nullable="false" />
+    <Property Name="FixedRate1" Type="Decimal" Precision="18" Scale="2" />
+    <NavigationProperty Name="Accounts" Relationship="DSAModel.FK_Accounts_FixedRates" FromRole="FixedRates" ToRole="Accounts" />
+  </EntityType>
+  <EntityType Name="Town">
+    <Key>
+      <PropertyRef Name="TownID" />
+    </Key>
+    <Property Name="TownID" Type="Int32" Nullable="false" />
+    <Property Name="Town1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="CountryID" Type="Int32" />
+    <NavigationProperty Name="Country" Relationship="DSAModel.FK_Towns_Countries" FromRole="Towns" ToRole="Countries" />
+    <NavigationProperty Name="Users" Relationship="DSAModel.FK_Users_Towns" FromRole="Towns" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Transaction">
+    <Key>
+      <PropertyRef Name="TransactionID" />
+    </Key>
+    <Property Name="TransactionID" Type="Int32" Nullable="false" />
+    <Property Name="AccountID" Type="Int32" Nullable="false" />
+    <Property Name="Amount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="CurrencyID" Type="Int32" Nullable="false" />
+    <Property Name="FromAccountID" Type="Int32" Nullable="false" />
+    <Property Name="ToAccountID" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="Account" Relationship="DSAModel.FK_Transactions_Accounts" FromRole="Transactions" ToRole="Accounts" />
+  </EntityType>
+  <EntityType Name="UserRole">
+    <Key>
+      <PropertyRef Name="UserRoleID" />
+    </Key>
+    <Property Name="UserRoleID" Type="Int32" Nullable="false" />
+    <Property Name="UserRole1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Users" Relationship="DSAModel.FK_Users_UserRoles" FromRole="UserRoles" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Surname" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DateOfBirth" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="HouseName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="HouseNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="TownID" Type="Int32" />
+    <Property Name="AppointmentID" Type="Int32" />
+    <Property Name="UserRoleID" Type="Int32" />
+    <Property Name="EmailAddress" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Username" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Pin" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Token" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="AccountID" Type="Int32" />
+    <NavigationProperty Name="Account" Relationship="DSAModel.FK_Users_Accounts" FromRole="Users" ToRole="Accounts" />
+    <NavigationProperty Name="Appointment" Relationship="DSAModel.FK_Users_Appointments" FromRole="Users" ToRole="Appointments" />
+    <NavigationProperty Name="Town" Relationship="DSAModel.FK_Users_Towns" FromRole="Users" ToRole="Towns" />
+    <NavigationProperty Name="UserRole" Relationship="DSAModel.FK_Users_UserRoles" FromRole="Users" ToRole="UserRoles" />
+  </EntityType>
+  <Association Name="FK_Accounts_AccountTypes">
+    <End Role="AccountTypes" Type="DSAModel.AccountType" Multiplicity="0..1" />
+    <End Role="Accounts" Type="DSAModel.Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AccountTypes">
+        <PropertyRef Name="AccountTypeID" />
+      </Principal>
+      <Dependent Role="Accounts">
+        <PropertyRef Name="AccountTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Accounts_Currencies">
+    <End Role="Currencies" Type="DSAModel.Currency" Multiplicity="0..1" />
+    <End Role="Accounts" Type="DSAModel.Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Currencies">
+        <PropertyRef Name="CurrencyID" />
+      </Principal>
+      <Dependent Role="Accounts">
+        <PropertyRef Name="CurrencyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Accounts_FixedRates">
+    <End Role="FixedRates" Type="DSAModel.FixedRate" Multiplicity="0..1" />
+    <End Role="Accounts" Type="DSAModel.Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FixedRates">
+        <PropertyRef Name="FixedRateID" />
+      </Principal>
+      <Dependent Role="Accounts">
+        <PropertyRef Name="FixedRateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transactions_Accounts">
+    <End Role="Accounts" Type="DSAModel.Account" Multiplicity="1" />
+    <End Role="Transactions" Type="DSAModel.Transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Accounts">
+        <PropertyRef Name="AccountID" />
+      </Principal>
+      <Dependent Role="Transactions">
+        <PropertyRef Name="AccountID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Accounts">
+    <End Role="Accounts" Type="DSAModel.Account" Multiplicity="0..1" />
+    <End Role="Users" Type="DSAModel.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Accounts">
+        <PropertyRef Name="AccountID" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="AccountID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Appointments">
+    <End Role="Appointments" Type="DSAModel.Appointment" Multiplicity="0..1" />
+    <End Role="Users" Type="DSAModel.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Appointments">
+        <PropertyRef Name="AppointmentID" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="AppointmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Towns_Countries">
+    <End Role="Countries" Type="DSAModel.Country" Multiplicity="0..1" />
+    <End Role="Towns" Type="DSAModel.Town" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Countries">
+        <PropertyRef Name="CountryID" />
+      </Principal>
+      <Dependent Role="Towns">
+        <PropertyRef Name="CountryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Towns">
+    <End Role="Towns" Type="DSAModel.Town" Multiplicity="0..1" />
+    <End Role="Users" Type="DSAModel.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Towns">
+        <PropertyRef Name="TownID" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="TownID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_UserRoles">
+    <End Role="UserRoles" Type="DSAModel.UserRole" Multiplicity="0..1" />
+    <End Role="Users" Type="DSAModel.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserRoles">
+        <PropertyRef Name="UserRoleID" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="UserRoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

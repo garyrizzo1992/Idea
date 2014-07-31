@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MvcApplication1.Controllers.AccountsController" Collapsed="true">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAEAAAIAAAAAAQAAAAwAAACAQAACAAAAAAA=</HashCode>
+      <FileName>Controllers\AccountsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MvcApplication1.Controllers.AppointmentsController" Collapsed="true">
+    <Position X="9.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQEAAAAAAAAAACAEAAAAIAAA=</HashCode>
+      <FileName>Controllers\AppointmentsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MvcApplication1.Controllers.UserAuthenticationController" Collapsed="true">
+    <Position X="14.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAIAAAAAAAIAAAAAACAAAAAQAQAAAAQ=</HashCode>
+      <FileName>Controllers\UserAuthenticationController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MvcApplication1.MvcApplication" Collapsed="true">
+    <Position X="9.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAIAQAAAAAAAAA=</HashCode>
+      <FileName>Global.asax.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MvcApplication1.Models.AccountRenewModel" Collapsed="true">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAqAAAAAghAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Models\AccountRenewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MvcApplication1.Models.AccountsModel" Collapsed="true">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAICAAAACgAAAAAAAAgAACQAAAAAAFIQAABAAAAA=</HashCode>
+      <FileName>Models\AccountsModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MvcApplication1.Models.AppointmentModel" Collapsed="true">
+    <Position X="7.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAAACAgAAAAAAQAAAAAAAAAAAABAEAAAIAAAAA=</HashCode>
+      <FileName>Models\AppointmentModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MvcApplication1.Models.displayAccountModel" Collapsed="true">
+    <Position X="9.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Models\displayAccountModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MvcApplication1.Models.ErrorModel" Collapsed="true">
+    <Position X="11.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Models\ErrorModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MvcApplication1.Models.FilterTransactionModel" Collapsed="true">
+    <Position X="13" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAgAAAAAAAEAAAAA=</HashCode>
+      <FileName>Models\FilterTransactionModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MvcApplication1.Models.LoginModel" Collapsed="true">
+    <Position X="6" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Models\LoginModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MvcApplication1.Models.LogsModel" Collapsed="true">
+    <Position X="7.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAABAAAAgAAAAAgAAAAggAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Models\LogsModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MvcApplication1.Models.TransactionModel" Collapsed="true">
+    <Position X="16.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAgCCAAAAEBAAAAAEAAAAA=</HashCode>
+      <FileName>Models\TransactionModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MvcApplication1.Models.TransferExternalModel" Collapsed="true">
+    <Position X="7.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAABAIAAg=</HashCode>
+      <FileName>Models\TransferExternalModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MvcApplication1.Models.TransferModel" Collapsed="true">
+    <Position X="9.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAABAIAAg=</HashCode>
+      <FileName>Models\TransferModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MvcApplication1.AccountsReference.Log" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QIAAAAADAAAgAAACEgAAAAgAgAAAAAAFAAAAAAYAAAA=</HashCode>
+      <FileName>Service References\AccountsReference\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MvcApplication1.AccountsReference.FixedRate" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEASAAACAABAAAgAAAAAiAAAAACEAAAAAAIAAAA=</HashCode>
+      <FileName>Service References\AccountsReference\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MvcApplication1.AccountsReference.Account" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wAAABMATAAAAgAIAAghgCSyQiACAABAGYAgIAAagQAA=</HashCode>
+      <FileName>Service References\AccountsReference\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MvcApplication1.AccountsReference.AccountType" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIACAAAAAAAAAAggAAAAgAAAAACEAAAAAAIAQQA=</HashCode>
+      <FileName>Service References\AccountsReference\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MvcApplication1.AccountsReference.Currency" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAIAAAgAQAAQiAAAAACEAAAAAAIAAAA=</HashCode>
+      <FileName>Service References\AccountsReference\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MvcApplication1.AccountsReference.TransactionType" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAICAAAAAAAAAAAAAAAAoAMAAAAEAAAAAAJAAAA=</HashCode>
+      <FileName>Service References\AccountsReference\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MvcApplication1.AccountsReference.Transaction" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAACAAAAAAICAAACCQCwoCICAEEFAAAAAAIAMAA=</HashCode>
+      <FileName>Service References\AccountsReference\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MvcApplication1.AccountsReference.AccountsServiceClient" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAoQCAAAIAFCAAABMEQAABAAIAACAAAAIHAAACACA=</HashCode>
+      <FileName>Service References\AccountsReference\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MvcApplication1.AppointmentReference.Appointment" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIABAEACAACgAAAGAAAAADiAgAgAAAAFBEAIAIYAAQA=</HashCode>
+      <FileName>Service References\AppointmentReference\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MvcApplication1.AppointmentReference.AppointmentStatu" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAGAAAAAAAACAAAAAAAwAAAAAAEBAAAAIIAAAA=</HashCode>
+      <FileName>Service References\AppointmentReference\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MvcApplication1.AppointmentReference.User" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAICAoAgkgAACQACBQwBxEBQAIgEBAACIlZFAAI=</HashCode>
+      <FileName>Service References\AppointmentReference\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MvcApplication1.AppointmentReference.Town" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACgCAgEgAAAAAAAAAAAAgAMQIAAEQAAABAJAAAA=</HashCode>
+      <FileName>Service References\AppointmentReference\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MvcApplication1.AppointmentReference.UserRole" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACACAgAAAAAAAAAAAAAAgAAAAAgEAQACAEIAAAA=</HashCode>
+      <FileName>Service References\AppointmentReference\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MvcApplication1.AppointmentReference.Country" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAgCAAAAQAAAAAAAAAAAgBAQAAAEEAAAAAIAAAA=</HashCode>
+      <FileName>Service References\AppointmentReference\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MvcApplication1.AppointmentReference.AppointmentsServiceClient" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAQAAAAAAAAAAAAAAgQAAAAAAAgIAAAAAAA=</HashCode>
+      <FileName>Service References\AppointmentReference\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MvcApplication1.UserReference.User" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAICAoAgkgAACQACBQwBxEBQAIgEBAACIlZFAAI=</HashCode>
+      <FileName>Service References\UserReference\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MvcApplication1.UserReference.Town" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACgCAgEgAAAAAAAAAAAAgAMQIAAEQAAABAJAAAA=</HashCode>
+      <FileName>Service References\UserReference\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MvcApplication1.UserReference.UserRole" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACACAgAAAAAAAAAAAAAAgAAAAAgEAQACAEIAAAA=</HashCode>
+      <FileName>Service References\UserReference\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MvcApplication1.UserReference.Appointment" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIABAEACAACgAAAGAAAAADiAgAgAAAAFBEAIAIYAAQA=</HashCode>
+      <FileName>Service References\UserReference\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MvcApplication1.UserReference.AppointmentStatu" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAGAAAAAAAACAAAAAAAwAAAAAAEBAAAAIIAAAA=</HashCode>
+      <FileName>Service References\UserReference\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MvcApplication1.UserReference.Country" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAgCAAAAQAAAAAAAAAAAgBAQAAAEEAAAAAIAAAA=</HashCode>
+      <FileName>Service References\UserReference\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MvcApplication1.UserReference.UsersServiceClient" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAAgAAAAAAAAAAAAEAAQAAAAAAA=</HashCode>
+      <FileName>Service References\UserReference\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="MvcApplication1.AccountsReference.IAccountsService" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAoQCAAAIAFCAAABMEQAABAAIAACAAAAIHAAACACA=</HashCode>
+      <FileName>Service References\AccountsReference\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MvcApplication1.AccountsReference.IAccountsServiceChannel" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\AccountsReference\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MvcApplication1.AppointmentReference.IAppointmentsService" Collapsed="true">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAQAAAAAAAAAAAAAAgQAAAAAAAgIAAAAAAA=</HashCode>
+      <FileName>Service References\AppointmentReference\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MvcApplication1.AppointmentReference.IAppointmentsServiceChannel" Collapsed="true">
+    <Position X="3.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\AppointmentReference\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MvcApplication1.UserReference.IUsersService" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAAgAAAAAAAAAAAAEAAQAAAAAAA=</HashCode>
+      <FileName>Service References\UserReference\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MvcApplication1.UserReference.IUsersServiceChannel" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\UserReference\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

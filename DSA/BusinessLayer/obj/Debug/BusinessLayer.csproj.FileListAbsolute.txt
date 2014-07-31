@@ -1,0 +1,36 @@
+C:\Users\Gary\documents\visual studio 2010\Projects\DSA\BusinessLayer\bin\BusinessLayer.dll
+C:\Users\Gary\documents\visual studio 2010\Projects\DSA\BusinessLayer\bin\BusinessLayer.pdb
+C:\Users\Gary\documents\visual studio 2010\Projects\DSA\BusinessLayer\bin\Common.dll
+C:\Users\Gary\documents\visual studio 2010\Projects\DSA\BusinessLayer\bin\DataAccess.dll
+C:\Users\Gary\documents\visual studio 2010\Projects\DSA\BusinessLayer\bin\Common.pdb
+C:\Users\Gary\documents\visual studio 2010\Projects\DSA\BusinessLayer\bin\DataAccess.pdb
+C:\Users\Gary\documents\visual studio 2010\Projects\DSA\BusinessLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Gary\documents\visual studio 2010\Projects\DSA\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\Gary\documents\visual studio 2010\Projects\DSA\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\Gary\Dropbox\DSA\DSA\BusinessLayer\bin\BusinessLayer.dll
+C:\Users\Gary\Dropbox\DSA\DSA\BusinessLayer\bin\BusinessLayer.pdb
+C:\Users\Gary\Dropbox\DSA\DSA\BusinessLayer\bin\Common.dll
+C:\Users\Gary\Dropbox\DSA\DSA\BusinessLayer\bin\DataAccess.dll
+C:\Users\Gary\Dropbox\DSA\DSA\BusinessLayer\bin\Common.pdb
+C:\Users\Gary\Dropbox\DSA\DSA\BusinessLayer\bin\DataAccess.pdb
+C:\Users\Gary\Dropbox\DSA\DSA\BusinessLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Gary\Dropbox\DSA\DSA\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\Gary\Dropbox\DSA\DSA\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\Gary\Desktop\DSA\DSA\BusinessLayer\bin\BusinessLayer.dll
+C:\Users\Gary\Desktop\DSA\DSA\BusinessLayer\bin\BusinessLayer.pdb
+C:\Users\Gary\Desktop\DSA\DSA\BusinessLayer\bin\Common.dll
+C:\Users\Gary\Desktop\DSA\DSA\BusinessLayer\bin\DataAccess.dll
+C:\Users\Gary\Desktop\DSA\DSA\BusinessLayer\bin\Common.pdb
+C:\Users\Gary\Desktop\DSA\DSA\BusinessLayer\bin\DataAccess.pdb
+C:\Users\Gary\Desktop\DSA\DSA\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Users\Gary\Desktop\DSA\DSA\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\Gary\Desktop\DSA\DSA\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\Gary\Desktop\Gary Rizzo - Reference Project MVC\DSA\BusinessLayer\bin\BusinessLayer.dll
+C:\Users\Gary\Desktop\Gary Rizzo - Reference Project MVC\DSA\BusinessLayer\bin\BusinessLayer.pdb
+C:\Users\Gary\Desktop\Gary Rizzo - Reference Project MVC\DSA\BusinessLayer\bin\Common.dll
+C:\Users\Gary\Desktop\Gary Rizzo - Reference Project MVC\DSA\BusinessLayer\bin\DataAccess.dll
+C:\Users\Gary\Desktop\Gary Rizzo - Reference Project MVC\DSA\BusinessLayer\bin\Common.pdb
+C:\Users\Gary\Desktop\Gary Rizzo - Reference Project MVC\DSA\BusinessLayer\bin\DataAccess.pdb
+C:\Users\Gary\Desktop\Gary Rizzo - Reference Project MVC\DSA\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Users\Gary\Desktop\Gary Rizzo - Reference Project MVC\DSA\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\Gary\Desktop\Gary Rizzo - Reference Project MVC\DSA\BusinessLayer\obj\Debug\BusinessLayer.pdb

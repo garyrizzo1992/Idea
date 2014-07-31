@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AccountsService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:5004/AccountsService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:5004/AccountsService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:5004/AccountsService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Common" />
+      <xsd:import schemaLocation="http://localhost:5004/AccountsService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" />
+      <xsd:import schemaLocation="http://localhost:5004/AccountsService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAccountsService_AddLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddLog" />
+  </wsdl:message>
+  <wsdl:message name="IAccountsService_AddLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountsService_getDuarationOfAccountById_InputMessage">
+    <wsdl:part name="parameters" element="tns:getDuarationOfAccountById" />
+  </wsdl:message>
+  <wsdl:message name="IAccountsService_getDuarationOfAccountById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getDuarationOfAccountByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountsService_DisableAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:DisableAccount" />
+  </wsdl:message>
+  <wsdl:message name="IAccountsService_DisableAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DisableAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountsService_UpdateAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAccount" />
+  </wsdl:message>
+  <wsdl:message name="IAccountsService_UpdateAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountsService_GetNotFixedAccounts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNotFixedAccounts" />
+  </wsdl:message>
+  <wsdl:message name="IAccountsService_GetNotFixedAccounts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNotFixedAccountsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountsService_GetExpiredAccounts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExpiredAccounts" />
+  </wsdl:message>
+  <wsdl:message name="IAccountsService_GetExpiredAccounts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExpiredAccountsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountsService_GetTransactionByAccountIDAndDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionByAccountIDAndDate" />
+  </wsdl:message>
+  <wsdl:message name="IAccountsService_GetTransactionByAccountIDAndDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionByAccountIDAndDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountsService_AddTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddTransaction" />
+  </wsdl:message>
+  <wsdl:message name="IAccountsService_AddTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountsService_getAccountByUsername_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAccountByUsername" />
+  </wsdl:message>
+  <wsdl:message name="IAccountsService_getAccountByUsername_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAccountByUsernameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountsService_getAccountsNotFixed_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAccountsNotFixed" />
+  </wsdl:message>
+  <wsdl:message name="IAccountsService_getAccountsNotFixed_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAccountsNotFixedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountsService_getAccountsByUsernameAndNotFixed_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAccountsByUsernameAndNotFixed" />
+  </wsdl:message>
+  <wsdl:message name="IAccountsService_getAccountsByUsernameAndNotFixed_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAccountsByUsernameAndNotFixedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountsService_getCurrencyByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCurrencyByName" />
+  </wsdl:message>
+  <wsdl:message name="IAccountsService_getCurrencyByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCurrencyByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountsService_getAccountsByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAccountsByID" />
+  </wsdl:message>
+  <wsdl:message name="IAccountsService_getAccountsByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAccountsByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountsService_GetCurrencyByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrencyByID" />
+  </wsdl:message>
+  <wsdl:message name="IAccountsService_GetCurrencyByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrencyByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountsService_GetCurrency_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrency" />
+  </wsdl:message>
+  <wsdl:message name="IAccountsService_GetCurrency_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrencyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountsService_AddAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddAccount" />
+  </wsdl:message>
+  <wsdl:message name="IAccountsService_AddAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountsService_AmmendBalance_InputMessage">
+    <wsdl:part name="parameters" element="tns:AmmendBalance" />
+  </wsdl:message>
+  <wsdl:message name="IAccountsService_AmmendBalance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AmmendBalanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountsService_GetAccountType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountType" />
+  </wsdl:message>
+  <wsdl:message name="IAccountsService_GetAccountType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountsService_GetFixedRates_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFixedRates" />
+  </wsdl:message>
+  <wsdl:message name="IAccountsService_GetFixedRates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFixedRatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountsService_getAccountByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAccountByID" />
+  </wsdl:message>
+  <wsdl:message name="IAccountsService_getAccountByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAccountByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountsService_getAccountsByUserID_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAccountsByUserID" />
+  </wsdl:message>
+  <wsdl:message name="IAccountsService_getAccountsByUserID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAccountsByUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountsService_GetTransactionByAccountID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionByAccountID" />
+  </wsdl:message>
+  <wsdl:message name="IAccountsService_GetTransactionByAccountID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionByAccountIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountsService_GetLogs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLogs" />
+  </wsdl:message>
+  <wsdl:message name="IAccountsService_GetLogs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLogsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAccountsService_GetLogsByDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLogsByDate" />
+  </wsdl:message>
+  <wsdl:message name="IAccountsService_GetLogsByDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLogsByDateResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IAccountsService">
+    <wsdl:operation name="AddLog">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountsService/AddLog" message="tns:IAccountsService_AddLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountsService/AddLogResponse" message="tns:IAccountsService_AddLog_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getDuarationOfAccountById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountsService/getDuarationOfAccountById" message="tns:IAccountsService_getDuarationOfAccountById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountsService/getDuarationOfAccountByIdResponse" message="tns:IAccountsService_getDuarationOfAccountById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DisableAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountsService/DisableAccount" message="tns:IAccountsService_DisableAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountsService/DisableAccountResponse" message="tns:IAccountsService_DisableAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountsService/UpdateAccount" message="tns:IAccountsService_UpdateAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountsService/UpdateAccountResponse" message="tns:IAccountsService_UpdateAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNotFixedAccounts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountsService/GetNotFixedAccounts" message="tns:IAccountsService_GetNotFixedAccounts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountsService/GetNotFixedAccountsResponse" message="tns:IAccountsService_GetNotFixedAccounts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExpiredAccounts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountsService/GetExpiredAccounts" message="tns:IAccountsService_GetExpiredAccounts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountsService/GetExpiredAccountsResponse" message="tns:IAccountsService_GetExpiredAccounts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionByAccountIDAndDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountsService/GetTransactionByAccountIDAndDate" message="tns:IAccountsService_GetTransactionByAccountIDAndDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountsService/GetTransactionByAccountIDAndDateResponse" message="tns:IAccountsService_GetTransactionByAccountIDAndDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddTransaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountsService/AddTransaction" message="tns:IAccountsService_AddTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountsService/AddTransactionResponse" message="tns:IAccountsService_AddTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAccountByUsername">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountsService/getAccountByUsername" message="tns:IAccountsService_getAccountByUsername_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountsService/getAccountByUsernameResponse" message="tns:IAccountsService_getAccountByUsername_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAccountsNotFixed">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountsService/getAccountsNotFixed" message="tns:IAccountsService_getAccountsNotFixed_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountsService/getAccountsNotFixedResponse" message="tns:IAccountsService_getAccountsNotFixed_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAccountsByUsernameAndNotFixed">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountsService/getAccountsByUsernameAndNotFixed" message="tns:IAccountsService_getAccountsByUsernameAndNotFixed_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountsService/getAccountsByUsernameAndNotFixedResponse" message="tns:IAccountsService_getAccountsByUsernameAndNotFixed_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCurrencyByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountsService/getCurrencyByName" message="tns:IAccountsService_getCurrencyByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountsService/getCurrencyByNameResponse" message="tns:IAccountsService_getCurrencyByName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAccountsByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountsService/getAccountsByID" message="tns:IAccountsService_getAccountsByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountsService/getAccountsByIDResponse" message="tns:IAccountsService_getAccountsByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountsService/GetCurrencyByID" message="tns:IAccountsService_GetCurrencyByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountsService/GetCurrencyByIDResponse" message="tns:IAccountsService_GetCurrencyByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrency">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountsService/GetCurrency" message="tns:IAccountsService_GetCurrency_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountsService/GetCurrencyResponse" message="tns:IAccountsService_GetCurrency_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountsService/AddAccount" message="tns:IAccountsService_AddAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountsService/AddAccountResponse" message="tns:IAccountsService_AddAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AmmendBalance">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountsService/AmmendBalance" message="tns:IAccountsService_AmmendBalance_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountsService/AmmendBalanceResponse" message="tns:IAccountsService_AmmendBalance_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountsService/GetAccountType" message="tns:IAccountsService_GetAccountType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountsService/GetAccountTypeResponse" message="tns:IAccountsService_GetAccountType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFixedRates">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountsService/GetFixedRates" message="tns:IAccountsService_GetFixedRates_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountsService/GetFixedRatesResponse" message="tns:IAccountsService_GetFixedRates_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAccountByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountsService/getAccountByID" message="tns:IAccountsService_getAccountByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountsService/getAccountByIDResponse" message="tns:IAccountsService_getAccountByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAccountsByUserID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountsService/getAccountsByUserID" message="tns:IAccountsService_getAccountsByUserID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountsService/getAccountsByUserIDResponse" message="tns:IAccountsService_getAccountsByUserID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionByAccountID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountsService/GetTransactionByAccountID" message="tns:IAccountsService_GetTransactionByAccountID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountsService/GetTransactionByAccountIDResponse" message="tns:IAccountsService_GetTransactionByAccountID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLogs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountsService/GetLogs" message="tns:IAccountsService_GetLogs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountsService/GetLogsResponse" message="tns:IAccountsService_GetLogs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLogsByDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAccountsService/GetLogsByDate" message="tns:IAccountsService_GetLogsByDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAccountsService/GetLogsByDateResponse" message="tns:IAccountsService_GetLogsByDate_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IAccountsService" type="tns:IAccountsService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddLog">
+      <soap:operation soapAction="http://tempuri.org/IAccountsService/AddLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDuarationOfAccountById">
+      <soap:operation soapAction="http://tempuri.org/IAccountsService/getDuarationOfAccountById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisableAccount">
+      <soap:operation soapAction="http://tempuri.org/IAccountsService/DisableAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAccount">
+      <soap:operation soapAction="http://tempuri.org/IAccountsService/UpdateAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNotFixedAccounts">
+      <soap:operation soapAction="http://tempuri.org/IAccountsService/GetNotFixedAccounts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExpiredAccounts">
+      <soap:operation soapAction="http://tempuri.org/IAccountsService/GetExpiredAccounts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionByAccountIDAndDate">
+      <soap:operation soapAction="http://tempuri.org/IAccountsService/GetTransactionByAccountIDAndDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddTransaction">
+      <soap:operation soapAction="http://tempuri.org/IAccountsService/AddTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAccountByUsername">
+      <soap:operation soapAction="http://tempuri.org/IAccountsService/getAccountByUsername" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAccountsNotFixed">
+      <soap:operation soapAction="http://tempuri.org/IAccountsService/getAccountsNotFixed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAccountsByUsernameAndNotFixed">
+      <soap:operation soapAction="http://tempuri.org/IAccountsService/getAccountsByUsernameAndNotFixed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCurrencyByName">
+      <soap:operation soapAction="http://tempuri.org/IAccountsService/getCurrencyByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAccountsByID">
+      <soap:operation soapAction="http://tempuri.org/IAccountsService/getAccountsByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyByID">
+      <soap:operation soapAction="http://tempuri.org/IAccountsService/GetCurrencyByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrency">
+      <soap:operation soapAction="http://tempuri.org/IAccountsService/GetCurrency" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAccount">
+      <soap:operation soapAction="http://tempuri.org/IAccountsService/AddAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AmmendBalance">
+      <soap:operation soapAction="http://tempuri.org/IAccountsService/AmmendBalance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountType">
+      <soap:operation soapAction="http://tempuri.org/IAccountsService/GetAccountType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFixedRates">
+      <soap:operation soapAction="http://tempuri.org/IAccountsService/GetFixedRates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAccountByID">
+      <soap:operation soapAction="http://tempuri.org/IAccountsService/getAccountByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAccountsByUserID">
+      <soap:operation soapAction="http://tempuri.org/IAccountsService/getAccountsByUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionByAccountID">
+      <soap:operation soapAction="http://tempuri.org/IAccountsService/GetTransactionByAccountID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLogs">
+      <soap:operation soapAction="http://tempuri.org/IAccountsService/GetLogs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLogsByDate">
+      <soap:operation soapAction="http://tempuri.org/IAccountsService/GetLogsByDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AccountsService">
+    <wsdl:port name="BasicHttpBinding_IAccountsService" binding="tns:BasicHttpBinding_IAccountsService">
+      <soap:address location="http://localhost:5004/AccountsService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

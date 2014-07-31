@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Common" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Common" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:5004/AccountsService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" />
+  <xs:complexType name="Log">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q1:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AccountID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Date" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LogID" type="xs:int" />
+          <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Log" nillable="true" type="tns:Log" />
+  <xs:complexType name="FixedRate">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q2:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Accounts" nillable="true" type="tns:ArrayOfAccount" />
+          <xs:element minOccurs="0" name="Duration" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FixedRate1" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="FixedRateID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FixedRate" nillable="true" type="tns:FixedRate" />
+  <xs:complexType name="ArrayOfAccount">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Account" nillable="true" type="tns:Account" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAccount" nillable="true" type="tns:ArrayOfAccount" />
+  <xs:complexType name="Account">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q3:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AccountFriendlyName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AccountID" type="xs:int" />
+          <xs:element minOccurs="0" name="AccountType" nillable="true" type="tns:AccountType" />
+          <xs:element minOccurs="0" name="AccountTypeID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AccountTypeReference" nillable="true" type="q3:EntityReferenceOfAccountTypeKmbgGhhj" />
+          <xs:element minOccurs="0" name="Balance" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CreationDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Currency" nillable="true" type="tns:Currency" />
+          <xs:element minOccurs="0" name="CurrencyID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CurrencyReference" nillable="true" type="q3:EntityReferenceOfCurrencyKmbgGhhj" />
+          <xs:element minOccurs="0" name="FixedRate" nillable="true" type="tns:FixedRate" />
+          <xs:element minOccurs="0" name="FixedRateID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="FixedRateReference" nillable="true" type="q3:EntityReferenceOfFixedRateKmbgGhhj" />
+          <xs:element minOccurs="0" name="FromAccountID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="renewal" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Account" nillable="true" type="tns:Account" />
+  <xs:complexType name="AccountType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q4:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AccountType1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AccountTypeID" type="xs:int" />
+          <xs:element minOccurs="0" name="Accounts" nillable="true" type="tns:ArrayOfAccount" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AccountType" nillable="true" type="tns:AccountType" />
+  <xs:complexType name="Currency">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q5:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Accounts" nillable="true" type="tns:ArrayOfAccount" />
+          <xs:element minOccurs="0" name="Currency1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrencyID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Currency" nillable="true" type="tns:Currency" />
+  <xs:complexType name="ArrayOfTransaction">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Transaction" nillable="true" type="tns:Transaction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTransaction" nillable="true" type="tns:ArrayOfTransaction" />
+  <xs:complexType name="Transaction">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q6:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Amount" type="xs:decimal" />
+          <xs:element minOccurs="0" name="CurrencyID" type="xs:int" />
+          <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FromAccountID" type="xs:int" />
+          <xs:element minOccurs="0" name="ToAccountID" type="xs:int" />
+          <xs:element minOccurs="0" name="TransactionID" type="xs:int" />
+          <xs:element minOccurs="0" name="TransactionType" nillable="true" type="tns:TransactionType" />
+          <xs:element minOccurs="0" name="TransactionTypeID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="TransactionTypeReference" nillable="true" type="q6:EntityReferenceOfTransactionTypeKmbgGhhj" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Transaction" nillable="true" type="tns:Transaction" />
+  <xs:complexType name="TransactionType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q7:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="TransactionType1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TransactionTypeID" type="xs:int" />
+          <xs:element minOccurs="0" name="Transactions" nillable="true" type="tns:ArrayOfTransaction" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TransactionType" nillable="true" type="tns:TransactionType" />
+  <xs:complexType name="ArrayOfCurrency">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Currency" nillable="true" type="tns:Currency" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCurrency" nillable="true" type="tns:ArrayOfCurrency" />
+  <xs:complexType name="ArrayOfAccountType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AccountType" nillable="true" type="tns:AccountType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAccountType" nillable="true" type="tns:ArrayOfAccountType" />
+  <xs:complexType name="ArrayOfFixedRate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FixedRate" nillable="true" type="tns:FixedRate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFixedRate" nillable="true" type="tns:ArrayOfFixedRate" />
+  <xs:complexType name="ArrayOfLog">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Log" nillable="true" type="tns:Log" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLog" nillable="true" type="tns:ArrayOfLog" />
+</xs:schema>

@@ -1,0 +1,185 @@
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error
+{
+    color: #ff0000;
+}
+
+.field-validation-valid
+{
+    display: none;
+}
+
+.input-validation-error
+{
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors
+{
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.validation-summary-valid
+{
+    display: none;
+}
+#header
+{
+    width: 100%;
+    height: 200px;
+}
+
+#logo
+{
+    float: left;
+    width: 80%;
+}
+#loginstatus
+{
+    float: left;
+    width: 20%;
+}
+#menu
+{
+    background-color: #BFBFBF; 
+    border-radius: 15px;
+    border:0px;
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    font-family:Arial;
+}
+#menu ul
+{
+    list-style: none;
+    margin-left:30%;
+    padding: 0;
+    padding-bottom:10px;
+   
+}
+#menu ul li
+{
+    display: inline;
+     float: left;
+    padding: 0 10px;
+    
+}
+
+#menu ul li a
+{
+     text-decoration: none;
+      color:Black;
+      position:relative;
+}
+#menu ul li a:hover
+{
+    padding: 10px;
+     text-decoration: none;
+      color:White;
+      background-color:#E5E4E2;
+      box-shadow: 2px 2px 2px #999;
+}
+    
+#Maincontent
+{
+    float:left;
+}
+body
+{
+    width:100%;
+    margin: 0 auto;
+    background-color: #A65353;
+    height: 100% ;
+    
+}
+
+input[type="text"], select
+{
+    width: 200px;
+    height: 25px;
+    line-height: 25px;
+    font-size: large;
+    outline-color:#A65353;
+}
+
+a, a:visited
+{
+    color: #A65353;    
+}
+    
+a:hover
+{
+    color: Black;
+}
+
+footer
+{
+    width:80%;
+    height: 60px;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 60px;
+    font-size: larger;
+     -moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select:none;
+	user-select:none;	
+}
+        
+    
+
+h2
+{
+    text-align:left;
+    }
+
+.text
+{
+    font-size: large;
+    
+    }
+
+
+input[type="submit"] {
+    width: auto;
+    height: 25px;
+    font-size: medium;
+}
+
+#container
+{
+   
+   -moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select:none;
+	user-select:none;	
+   
+    padding: 20px;
+    width:80%;
+    margin: 0 auto;
+    background-color: White;
+    min-height: 900px;
+    height: 100% ;
+    -webkit-box-shadow: 9px 10px 24px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 9px 10px 24px -8px rgba(0,0,0,0.75);
+    box-shadow: 9px 10px 24px -8px rgba(0,0,0,0.75);
+    border-radius:2px;    
+}
+
+#content
+{
+    padding: 30px;
+    width: 500px;
+    margin:0 auto;
+   
+}
+
+.center
+{
+    width: 900px !important;
+    margin-left:-180px;
+    
+    }

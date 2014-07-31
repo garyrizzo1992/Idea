@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="718bd167-8238-4384-8768-ae08dff40798" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:5004/AppointmentsService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AppointmentsService.xsd" MetadataType="Schema" ID="9b10aa59-1fa6-48ae-b767-95ec501dcd45" SourceId="1" SourceUrl="http://localhost:5004/AppointmentsService.svc?xsd=xsd4" />
+    <MetadataFile FileName="AppointmentsService1.xsd" MetadataType="Schema" ID="e997476d-b49a-4ce9-a3eb-bab4cb8c8c1b" SourceId="1" SourceUrl="http://localhost:5004/AppointmentsService.svc?xsd=xsd3" />
+    <MetadataFile FileName="AppointmentsService2.xsd" MetadataType="Schema" ID="386f7e0b-f41c-4066-b353-7447fe04d9e6" SourceId="1" SourceUrl="http://localhost:5004/AppointmentsService.svc?xsd=xsd2" />
+    <MetadataFile FileName="AppointmentsService4.xsd" MetadataType="Schema" ID="094fec1b-33b6-47d1-9e06-6645e5b1c734" SourceId="1" SourceUrl="http://localhost:5004/AppointmentsService.svc?xsd=xsd1" />
+    <MetadataFile FileName="AppointmentsService3.xsd" MetadataType="Schema" ID="b5e9bb54-30c6-452f-8b3e-fb32c98031e7" SourceId="1" SourceUrl="http://localhost:5004/AppointmentsService.svc?xsd=xsd0" />
+    <MetadataFile FileName="AppointmentsService.wsdl" MetadataType="Wsdl" ID="2921216c-0596-4a5f-8aff-f643197668a9" SourceId="1" SourceUrl="http://localhost:5004/AppointmentsService.svc?wsdl" />
+    <MetadataFile FileName="AppointmentsService.disco" MetadataType="Disco" ID="16ec9b3b-568b-4d6e-8e94-5bd5194b2fa8" SourceId="1" SourceUrl="http://localhost:5004/AppointmentsService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

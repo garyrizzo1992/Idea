@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{55079C91-62D8-46B4-96D5-48854D3FBAAB}</ProjectGuid>
+    <ProjectTypeGuids>{F85E285D-A4E0-4152-9332-AB1D724D3325};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MvcApplication1</RootNamespace>
+    <AssemblyName>MvcApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\AccountsController.cs" />
+    <Compile Include="Controllers\AppointmentsController.cs" />
+    <Compile Include="Controllers\UserAuthenticationController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountRenewModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\AccountsModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\AppointmentModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\displayAccountModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\ErrorModel.cs" />
+    <Compile Include="Models\ExchangeRateModel.cs" />
+    <Compile Include="Models\FilterTransactionModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\LoginModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\LogsModel.cs" />
+    <Compile Include="Models\ReportModel.cs" />
+    <Compile Include="Models\TransactionModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\TransferExternalModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\TransferModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\AccountsReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AppointmentReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UserReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Images\dsalogo2.png" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="ClassDiagram3.cd" />
+    <None Include="Service References\AccountsReference\AccountsService.disco" />
+    <None Include="Service References\AccountsReference\configuration91.svcinfo" />
+    <None Include="Service References\AccountsReference\configuration.svcinfo" />
+    <None Include="Service References\AccountsReference\MvcApplication1.AccountsReference.Account.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AccountsReference\MvcApplication1.AccountsReference.AccountType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AccountsReference\MvcApplication1.AccountsReference.Currency.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AccountsReference\MvcApplication1.AccountsReference.FixedRate.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AccountsReference\MvcApplication1.AccountsReference.Log.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AccountsReference\MvcApplication1.AccountsReference.Transaction.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AccountsReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\AppointmentReference\AppointmentsService.disco" />
+    <None Include="Service References\AppointmentReference\configuration91.svcinfo" />
+    <None Include="Service References\AppointmentReference\configuration.svcinfo" />
+    <None Include="Service References\AppointmentReference\MvcApplication1.AppointmentReference.Appointment.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AppointmentReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\UserReference\MvcApplication1.UserReference.User.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserReference\MvcApplication1.UserReference.UserRole.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UserReference\UsersService.disco" />
+    <None Include="Service References\UserReference\configuration91.svcinfo" />
+    <None Include="Service References\UserReference\configuration.svcinfo" />
+    <None Include="Service References\UserReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Images\dsalogo.png" />
+    <Content Include="Views\Accounts\Accounts.aspx" />
+    <Content Include="Views\Accounts\AddAccount.aspx" />
+    <Content Include="Views\Accounts\DisplayResult.aspx" />
+    <Content Include="Views\Accounts\ExchangePage.aspx" />
+    <Content Include="Views\Accounts\FilterLogs.aspx" />
+    <Content Include="Views\Accounts\FilterTransections.aspx" />
+    <Content Include="Views\Accounts\Report.aspx" />
+    <Content Include="Views\Accounts\ShowAccounts.aspx" />
+    <Content Include="Views\Accounts\ShowAccountsWithReport.aspx" />
+    <Content Include="Views\Accounts\showTransections.aspx" />
+    <Content Include="Views\Accounts\Transfer.aspx" />
+    <Content Include="Views\Accounts\TransferExternal.aspx" />
+    <Content Include="Views\Appointments\AcceptAppointment.aspx" />
+    <Content Include="Views\Appointments\RejectAppointment.aspx" />
+    <Content Include="Views\Appointments\RequestAppointment.aspx" />
+    <Content Include="Views\Appointments\ShowAppointments.aspx" />
+    <Content Include="Views\UserAuthentication\CheckAndDisplayExpired.aspx" />
+    <Content Include="Views\UserAuthentication\ErrorPage.aspx" />
+    <Content Include="Views\UserAuthentication\Login.aspx" />
+    <Content Include="Views\UserAuthentication\RenewAccount.aspx" />
+    <Content Include="Views\UserAuthentication\TransferInterest.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Shared\ClientMasterPage.Master" />
+    <Content Include="Views\Shared\AdminMasterPage.Master" />
+    <None Include="Service References\AccountsReference\AccountsService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AppointmentReference\AppointmentsService.wsdl" />
+    <None Include="Service References\AppointmentReference\AppointmentsService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AppointmentReference\AppointmentsService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AppointmentReference\AppointmentsService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AppointmentReference\AppointmentsService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AppointmentReference\AppointmentsService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserReference\UsersService.wsdl" />
+    <None Include="Service References\UserReference\UsersService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserReference\UsersService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserReference\UsersService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserReference\UsersService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserReference\UsersService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AccountsReference\" />
+    <WCFMetadataStorage Include="Service References\AppointmentReference\" />
+    <WCFMetadataStorage Include="Service References\UserReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AccountsReference\AccountsService.wsdl" />
+    <None Include="Service References\AccountsReference\AccountsService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AccountsReference\AccountsService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AccountsReference\AccountsService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AccountsReference\AccountsService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <Target Name="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>4999</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
