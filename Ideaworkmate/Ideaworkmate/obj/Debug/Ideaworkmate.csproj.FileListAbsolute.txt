@@ -59,6 +59,5 @@ C:\Users\Gary\Documents\GitHub\ideaworkmate.com\Ideaworkmate\Ideaworkmate\bin\Sy
 C:\Users\Gary\Documents\GitHub\ideaworkmate.com\Ideaworkmate\Ideaworkmate\bin\System.Web.WebPages.xml
 C:\Users\Gary\Documents\GitHub\ideaworkmate.com\Ideaworkmate\Ideaworkmate\bin\System.Web.WebPages.Deployment.xml
 C:\Users\Gary\Documents\GitHub\ideaworkmate.com\Ideaworkmate\Ideaworkmate\bin\System.Web.WebPages.Razor.xml
-C:\Users\Gary\Documents\GitHub\ideaworkmate.com\Ideaworkmate\Ideaworkmate\obj\Debug\Ideaworkmate.csprojResolveAssemblyReference.cache
 C:\Users\Gary\Documents\GitHub\ideaworkmate.com\Ideaworkmate\Ideaworkmate\obj\Debug\Ideaworkmate.dll
 C:\Users\Gary\Documents\GitHub\ideaworkmate.com\Ideaworkmate\Ideaworkmate\obj\Debug\Ideaworkmate.pdb

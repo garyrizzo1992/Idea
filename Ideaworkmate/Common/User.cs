@@ -25,7 +25,7 @@ namespace Common
         public Nullable<System.DateTime> DOB { get; set; }
         public string Address { get; set; }
         public string Locality { get; set; }
-        public byte[] JoinDate { get; set; }
+        public Nullable<System.DateTime> JoinDate { get; set; }
     
         public virtual ICollection<Order> Orders { get; set; }
     }

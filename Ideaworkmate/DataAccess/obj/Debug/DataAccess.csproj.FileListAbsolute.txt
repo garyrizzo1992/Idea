@@ -7,3 +7,6 @@ C:\Users\Gary\documents\visual studio 2013\Projects\Ideaworkmate\DataAccess\bin\
 C:\Users\Gary\documents\visual studio 2013\Projects\Ideaworkmate\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
 C:\Users\Gary\documents\visual studio 2013\Projects\Ideaworkmate\DataAccess\obj\Debug\DataAccess.dll
 C:\Users\Gary\documents\visual studio 2013\Projects\Ideaworkmate\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\Gary\Documents\GitHub\ideaworkmate.com\Ideaworkmate\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\Gary\Documents\GitHub\ideaworkmate.com\Ideaworkmate\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\Gary\Documents\GitHub\ideaworkmate.com\Ideaworkmate\DataAccess\obj\Debug\DataAccess.pdb

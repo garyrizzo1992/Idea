@@ -9,6 +9,9 @@ namespace DataAccess
 {
      public class UserRepository
     {
-
+         public IEnumerable<User> Getusers()
+         {
+             return entity
+             }   
     }
 }

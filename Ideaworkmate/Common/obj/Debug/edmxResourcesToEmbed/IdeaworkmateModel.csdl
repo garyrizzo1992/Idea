@@ -1,12 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="IdeaworkModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="IdeaworkEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Categories" EntityType="IdeaworkModel.Category" />
+    <EntitySet Name="Orders" EntityType="IdeaworkModel.Order" />
+    <EntitySet Name="OrdersProducts" EntityType="IdeaworkModel.OrdersProduct" />
+    <EntitySet Name="Products" EntityType="IdeaworkModel.Product" />
+    <EntitySet Name="Specifications" EntityType="IdeaworkModel.Specification" />
+    <EntitySet Name="Users" EntityType="IdeaworkModel.User" />
+    <AssociationSet Name="FK_Products_Categories" Association="IdeaworkModel.FK_Products_Categories">
+      <End Role="Category" EntitySet="Categories" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Orders_Users" Association="IdeaworkModel.FK_Orders_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Order" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrdersProducts_Orders" Association="IdeaworkModel.FK_OrdersProducts_Orders">
+      <End Role="Order" EntitySet="Orders" />
+      <End Role="OrdersProduct" EntitySet="OrdersProducts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrdersProducts_Specifications" Association="IdeaworkModel.FK_OrdersProducts_Specifications">
+      <End Role="Specification" EntitySet="Specifications" />
+      <End Role="OrdersProduct" EntitySet="OrdersProducts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Specifications_Products" Association="IdeaworkModel.FK_Specifications_Products">
+      <End Role="Product" EntitySet="Products" />
+      <End Role="Specification" EntitySet="Specifications" />
+    </AssociationSet>
+  </EntityContainer>
   <EntityType Name="Category">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="Guid" Nullable="false" />
     <Property Name="Category1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Products" Relationship="Self.FK_Products_Categories" FromRole="Categories" ToRole="Products" />
+    <NavigationProperty Name="Products" Relationship="IdeaworkModel.FK_Products_Categories" FromRole="Category" ToRole="Product" />
   </EntityType>
   <EntityType Name="Order">
     <Key>
@@ -17,8 +45,8 @@
     <Property Name="Totalprice" Type="Decimal" Precision="8" Scale="2" />
     <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="UserID" Type="Guid" />
-    <NavigationProperty Name="User" Relationship="Self.FK_Orders_Users" FromRole="Orders" ToRole="Users" />
-    <NavigationProperty Name="OrdersProducts" Relationship="Self.FK_OrdersProducts_Orders" FromRole="Orders" ToRole="OrdersProducts" />
+    <NavigationProperty Name="User" Relationship="IdeaworkModel.FK_Orders_Users" FromRole="Order" ToRole="User" />
+    <NavigationProperty Name="OrdersProducts" Relationship="IdeaworkModel.FK_OrdersProducts_Orders" FromRole="Order" ToRole="OrdersProduct" />
   </EntityType>
   <EntityType Name="OrdersProduct">
     <Key>
@@ -28,8 +56,8 @@
     <Property Name="OrderID" Type="Guid" />
     <Property Name="SpecificationID" Type="Guid" />
     <Property Name="Quantity" Type="Int32" />
-    <NavigationProperty Name="Order" Relationship="Self.FK_OrdersProducts_Orders" FromRole="OrdersProducts" ToRole="Orders" />
-    <NavigationProperty Name="Specification" Relationship="Self.FK_OrdersProducts_Specifications" FromRole="OrdersProducts" ToRole="Specifications" />
+    <NavigationProperty Name="Order" Relationship="IdeaworkModel.FK_OrdersProducts_Orders" FromRole="OrdersProduct" ToRole="Order" />
+    <NavigationProperty Name="Specification" Relationship="IdeaworkModel.FK_OrdersProducts_Specifications" FromRole="OrdersProduct" ToRole="Specification" />
   </EntityType>
   <EntityType Name="Product">
     <Key>
@@ -39,8 +67,8 @@
     <Property Name="Name" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
     <Property Name="Category" Type="Guid" />
     <Property Name="CategoryID" Type="Guid" />
-    <NavigationProperty Name="Category1" Relationship="Self.FK_Products_Categories" FromRole="Products" ToRole="Categories" />
-    <NavigationProperty Name="Specifications" Relationship="Self.FK_Specifications_Products" FromRole="Products" ToRole="Specifications" />
+    <NavigationProperty Name="Category1" Relationship="IdeaworkModel.FK_Products_Categories" FromRole="Product" ToRole="Category" />
+    <NavigationProperty Name="Specifications" Relationship="IdeaworkModel.FK_Specifications_Products" FromRole="Product" ToRole="Specification" />
   </EntityType>
   <EntityType Name="Specification">
     <Key>
@@ -50,8 +78,8 @@
     <Property Name="ProductID" Type="Guid" />
     <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="Price" Type="Decimal" Precision="8" Scale="2" />
-    <NavigationProperty Name="OrdersProducts" Relationship="Self.FK_OrdersProducts_Specifications" FromRole="Specifications" ToRole="OrdersProducts" />
-    <NavigationProperty Name="Product" Relationship="Self.FK_Specifications_Products" FromRole="Specifications" ToRole="Products" />
+    <NavigationProperty Name="OrdersProducts" Relationship="IdeaworkModel.FK_OrdersProducts_Specifications" FromRole="Specification" ToRole="OrdersProduct" />
+    <NavigationProperty Name="Product" Relationship="IdeaworkModel.FK_Specifications_Products" FromRole="Specification" ToRole="Product" />
   </EntityType>
   <EntityType Name="User">
     <Key>
@@ -63,95 +91,67 @@
     <Property Name="DOB" Type="DateTime" Precision="0" />
     <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="Locality" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="JoinDate" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
-    <NavigationProperty Name="Orders" Relationship="Self.FK_Orders_Users" FromRole="Users" ToRole="Orders" />
+    <Property Name="JoinDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Orders" Relationship="IdeaworkModel.FK_Orders_Users" FromRole="User" ToRole="Order" />
   </EntityType>
   <Association Name="FK_Products_Categories">
-    <End Role="Categories" Type="Self.Category" Multiplicity="0..1" />
-    <End Role="Products" Type="Self.Product" Multiplicity="*" />
+    <End Type="IdeaworkModel.Category" Role="Category" Multiplicity="0..1" />
+    <End Type="IdeaworkModel.Product" Role="Product" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Categories">
+      <Principal Role="Category">
         <PropertyRef Name="ID" />
       </Principal>
-      <Dependent Role="Products">
+      <Dependent Role="Product">
         <PropertyRef Name="CategoryID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Orders_Users">
-    <End Role="Users" Type="Self.User" Multiplicity="0..1" />
-    <End Role="Orders" Type="Self.Order" Multiplicity="*" />
+    <End Type="IdeaworkModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="IdeaworkModel.Order" Role="Order" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Users">
+      <Principal Role="User">
         <PropertyRef Name="ID" />
       </Principal>
-      <Dependent Role="Orders">
+      <Dependent Role="Order">
         <PropertyRef Name="UserID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_OrdersProducts_Orders">
-    <End Role="Orders" Type="Self.Order" Multiplicity="0..1" />
-    <End Role="OrdersProducts" Type="Self.OrdersProduct" Multiplicity="*" />
+    <End Type="IdeaworkModel.Order" Role="Order" Multiplicity="0..1" />
+    <End Type="IdeaworkModel.OrdersProduct" Role="OrdersProduct" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Orders">
+      <Principal Role="Order">
         <PropertyRef Name="ID" />
       </Principal>
-      <Dependent Role="OrdersProducts">
+      <Dependent Role="OrdersProduct">
         <PropertyRef Name="OrderID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_OrdersProducts_Specifications">
-    <End Role="Specifications" Type="Self.Specification" Multiplicity="0..1" />
-    <End Role="OrdersProducts" Type="Self.OrdersProduct" Multiplicity="*" />
+    <End Type="IdeaworkModel.Specification" Role="Specification" Multiplicity="0..1" />
+    <End Type="IdeaworkModel.OrdersProduct" Role="OrdersProduct" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Specifications">
+      <Principal Role="Specification">
         <PropertyRef Name="ID" />
       </Principal>
-      <Dependent Role="OrdersProducts">
+      <Dependent Role="OrdersProduct">
         <PropertyRef Name="SpecificationID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Specifications_Products">
-    <End Role="Products" Type="Self.Product" Multiplicity="0..1" />
-    <End Role="Specifications" Type="Self.Specification" Multiplicity="*" />
+    <End Type="IdeaworkModel.Product" Role="Product" Multiplicity="0..1" />
+    <End Type="IdeaworkModel.Specification" Role="Specification" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Products">
+      <Principal Role="Product">
         <PropertyRef Name="ID" />
       </Principal>
-      <Dependent Role="Specifications">
+      <Dependent Role="Specification">
         <PropertyRef Name="ProductID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="IdeaworkEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Categories" EntityType="Self.Category" />
-    <EntitySet Name="Orders" EntityType="Self.Order" />
-    <EntitySet Name="OrdersProducts" EntityType="Self.OrdersProduct" />
-    <EntitySet Name="Products" EntityType="Self.Product" />
-    <EntitySet Name="Specifications" EntityType="Self.Specification" />
-    <EntitySet Name="Users" EntityType="Self.User" />
-    <AssociationSet Name="FK_Products_Categories" Association="Self.FK_Products_Categories">
-      <End Role="Categories" EntitySet="Categories" />
-      <End Role="Products" EntitySet="Products" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Orders_Users" Association="Self.FK_Orders_Users">
-      <End Role="Users" EntitySet="Users" />
-      <End Role="Orders" EntitySet="Orders" />
-    </AssociationSet>
-    <AssociationSet Name="FK_OrdersProducts_Orders" Association="Self.FK_OrdersProducts_Orders">
-      <End Role="Orders" EntitySet="Orders" />
-      <End Role="OrdersProducts" EntitySet="OrdersProducts" />
-    </AssociationSet>
-    <AssociationSet Name="FK_OrdersProducts_Specifications" Association="Self.FK_OrdersProducts_Specifications">
-      <End Role="Specifications" EntitySet="Specifications" />
-      <End Role="OrdersProducts" EntitySet="OrdersProducts" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Specifications_Products" Association="Self.FK_Specifications_Products">
-      <End Role="Products" EntitySet="Products" />
-      <End Role="Specifications" EntitySet="Specifications" />
-    </AssociationSet>
-  </EntityContainer>
 </Schema>

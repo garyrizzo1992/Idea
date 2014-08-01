@@ -11,25 +11,22 @@
     <link href="../../Content/Site.css" rel="stylesheet" />
 </head>
 <body>
-    <div id="Content">
+    <div id="container">
         <header>
             <div>
                 <h1>IDEAWORKMATE</h1>
             </div>
+        </header>
+        <div id="menu">
             <div>
                 <ul>
-                    <li>
-                        home
-                    </li>
-                    <li>
-                        About us
-                    </li>
-                    <li>
-                        Products
-                    </li>
+                    <li><a href="<%: Url.Action("AddAccount","Accounts")%>">Home</a> </li>
+                    <li><a href="<%: Url.Action("AddAccount","Accounts")%>">Products</a> </li>
+                    <li><a href="<%: Url.Action("AddAccount","Accounts")%>">Contact us</a> </li>
                 </ul>
             </div>
-        </header>
+        </div>
+        <div id="Content"></div>
         <div id="dynamicContent">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
