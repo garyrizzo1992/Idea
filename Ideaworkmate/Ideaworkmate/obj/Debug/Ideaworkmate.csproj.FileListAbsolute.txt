@@ -61,3 +61,6 @@ C:\Users\Gary\Documents\GitHub\ideaworkmate.com\Ideaworkmate\Ideaworkmate\bin\Sy
 C:\Users\Gary\Documents\GitHub\ideaworkmate.com\Ideaworkmate\Ideaworkmate\bin\System.Web.WebPages.Razor.xml
 C:\Users\Gary\Documents\GitHub\ideaworkmate.com\Ideaworkmate\Ideaworkmate\obj\Debug\Ideaworkmate.dll
 C:\Users\Gary\Documents\GitHub\ideaworkmate.com\Ideaworkmate\Ideaworkmate\obj\Debug\Ideaworkmate.pdb
+C:\Users\Gary\Documents\GitHub\ideaworkmate.com\Ideaworkmate\Ideaworkmate\bin\EntityFramework.SqlServer.dll
+C:\Users\Gary\Documents\GitHub\ideaworkmate.com\Ideaworkmate\Ideaworkmate\bin\EntityFramework.SqlServer.xml
+C:\Users\Gary\Documents\GitHub\ideaworkmate.com\Ideaworkmate\Ideaworkmate\obj\Debug\Ideaworkmate.csprojResolveAssemblyReference.cache

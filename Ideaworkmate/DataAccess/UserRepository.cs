@@ -7,11 +7,11 @@ using Common;
 
 namespace DataAccess
 {
-     public class UserRepository
+     public class UserRepository : ConnectionClass
     {
          public IEnumerable<User> Getusers()
          {
-             return entity
-             }   
+             return Entity.Users.AsEnumerable();
+         }   
     }
 }

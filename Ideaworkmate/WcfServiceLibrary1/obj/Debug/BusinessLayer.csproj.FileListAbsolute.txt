@@ -14,3 +14,9 @@ C:\Users\Gary\Documents\GitHub\ideaworkmate.com\Ideaworkmate\WcfServiceLibrary1\
 C:\Users\Gary\Documents\GitHub\ideaworkmate.com\Ideaworkmate\WcfServiceLibrary1\obj\Debug\WcfServiceLibrary1.pdb
 C:\Users\Gary\Documents\GitHub\ideaworkmate.com\Ideaworkmate\WcfServiceLibrary1\bin\Debug\EntityFramework.dll
 C:\Users\Gary\Documents\GitHub\ideaworkmate.com\Ideaworkmate\WcfServiceLibrary1\bin\Debug\EntityFramework.xml
+C:\Users\Gary\Documents\GitHub\ideaworkmate.com\Ideaworkmate\WcfServiceLibrary1\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Gary\Documents\GitHub\ideaworkmate.com\Ideaworkmate\WcfServiceLibrary1\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Gary\Documents\GitHub\ideaworkmate.com\Ideaworkmate\WcfServiceLibrary1\bin\Debug\Common.dll
+C:\Users\Gary\Documents\GitHub\ideaworkmate.com\Ideaworkmate\WcfServiceLibrary1\bin\Debug\DataAccess.dll
+C:\Users\Gary\Documents\GitHub\ideaworkmate.com\Ideaworkmate\WcfServiceLibrary1\bin\Debug\Common.pdb
+C:\Users\Gary\Documents\GitHub\ideaworkmate.com\Ideaworkmate\WcfServiceLibrary1\bin\Debug\DataAccess.pdb

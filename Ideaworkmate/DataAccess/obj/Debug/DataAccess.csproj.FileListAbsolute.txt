@@ -10,3 +10,12 @@ C:\Users\Gary\documents\visual studio 2013\Projects\Ideaworkmate\DataAccess\obj\
 C:\Users\Gary\Documents\GitHub\ideaworkmate.com\Ideaworkmate\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
 C:\Users\Gary\Documents\GitHub\ideaworkmate.com\Ideaworkmate\DataAccess\obj\Debug\DataAccess.dll
 C:\Users\Gary\Documents\GitHub\ideaworkmate.com\Ideaworkmate\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\Gary\Documents\GitHub\ideaworkmate.com\Ideaworkmate\DataAccess\bin\Debug\DataAccess.dll.config
+C:\Users\Gary\Documents\GitHub\ideaworkmate.com\Ideaworkmate\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\Gary\Documents\GitHub\ideaworkmate.com\Ideaworkmate\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\Gary\Documents\GitHub\ideaworkmate.com\Ideaworkmate\DataAccess\bin\Debug\Common.dll
+C:\Users\Gary\Documents\GitHub\ideaworkmate.com\Ideaworkmate\DataAccess\bin\Debug\EntityFramework.dll
+C:\Users\Gary\Documents\GitHub\ideaworkmate.com\Ideaworkmate\DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Gary\Documents\GitHub\ideaworkmate.com\Ideaworkmate\DataAccess\bin\Debug\Common.pdb
+C:\Users\Gary\Documents\GitHub\ideaworkmate.com\Ideaworkmate\DataAccess\bin\Debug\EntityFramework.xml
+C:\Users\Gary\Documents\GitHub\ideaworkmate.com\Ideaworkmate\DataAccess\bin\Debug\EntityFramework.SqlServer.xml

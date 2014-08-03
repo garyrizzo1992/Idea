@@ -13,7 +13,6 @@ namespace Ideaworkmate.Models
         public DateTime DOB { get; set; }
         public string Address { get; set; }
         public string Locality { get; set; }
-
         public DateTime JoinDate { get; set; }
 
 
