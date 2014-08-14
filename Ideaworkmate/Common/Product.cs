@@ -21,10 +21,10 @@ namespace Common
     
         public System.Guid ID { get; set; }
         public string Name { get; set; }
-        public Nullable<System.Guid> Category { get; set; }
-        public Nullable<System.Guid> CategoryID { get; set; }
+        public string imageurl { get; set; }
+        public Nullable<int> C_ID { get; set; }
     
-        public virtual Category Category1 { get; set; }
+        public virtual Category Category { get; set; }
         public virtual ICollection<Specification> Specifications { get; set; }
     }
 }

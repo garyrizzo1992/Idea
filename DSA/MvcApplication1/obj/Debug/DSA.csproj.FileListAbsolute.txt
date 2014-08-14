@@ -18,3 +18,8 @@ C:\Users\Gary\Desktop\Gary Rizzo - Reference Project MVC\DSA\MvcApplication1\bin
 C:\Users\Gary\Desktop\Gary Rizzo - Reference Project MVC\DSA\MvcApplication1\obj\Debug\DSA.csprojResolveAssemblyReference.cache
 C:\Users\Gary\Desktop\Gary Rizzo - Reference Project MVC\DSA\MvcApplication1\obj\Debug\MvcApplication1.dll
 C:\Users\Gary\Desktop\Gary Rizzo - Reference Project MVC\DSA\MvcApplication1\obj\Debug\MvcApplication1.pdb
+C:\Users\Gary\Documents\GitHub\ideaworkmate.com\DSA\MvcApplication1\bin\MvcApplication1.dll
+C:\Users\Gary\Documents\GitHub\ideaworkmate.com\DSA\MvcApplication1\bin\MvcApplication1.pdb
+C:\Users\Gary\Documents\GitHub\ideaworkmate.com\DSA\MvcApplication1\obj\Debug\DSA.csprojResolveAssemblyReference.cache
+C:\Users\Gary\Documents\GitHub\ideaworkmate.com\DSA\MvcApplication1\obj\Debug\MvcApplication1.dll
+C:\Users\Gary\Documents\GitHub\ideaworkmate.com\DSA\MvcApplication1\obj\Debug\MvcApplication1.pdb
