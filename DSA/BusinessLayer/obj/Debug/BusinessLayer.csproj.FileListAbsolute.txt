@@ -34,3 +34,12 @@ C:\Users\Gary\Desktop\Gary Rizzo - Reference Project MVC\DSA\BusinessLayer\bin\D
 C:\Users\Gary\Desktop\Gary Rizzo - Reference Project MVC\DSA\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
 C:\Users\Gary\Desktop\Gary Rizzo - Reference Project MVC\DSA\BusinessLayer\obj\Debug\BusinessLayer.dll
 C:\Users\Gary\Desktop\Gary Rizzo - Reference Project MVC\DSA\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\Gary\Documents\GitHub\ideaworkmate.com\DSA\BusinessLayer\bin\BusinessLayer.dll
+C:\Users\Gary\Documents\GitHub\ideaworkmate.com\DSA\BusinessLayer\bin\BusinessLayer.pdb
+C:\Users\Gary\Documents\GitHub\ideaworkmate.com\DSA\BusinessLayer\bin\Common.dll
+C:\Users\Gary\Documents\GitHub\ideaworkmate.com\DSA\BusinessLayer\bin\DataAccess.dll
+C:\Users\Gary\Documents\GitHub\ideaworkmate.com\DSA\BusinessLayer\bin\Common.pdb
+C:\Users\Gary\Documents\GitHub\ideaworkmate.com\DSA\BusinessLayer\bin\DataAccess.pdb
+C:\Users\Gary\Documents\GitHub\ideaworkmate.com\DSA\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Users\Gary\Documents\GitHub\ideaworkmate.com\DSA\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\Gary\Documents\GitHub\ideaworkmate.com\DSA\BusinessLayer\obj\Debug\BusinessLayer.pdb

@@ -5,12 +5,22 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="IdeaworkModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
         <EntityType Name="Categories">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
           <Property Name="Category" Type="nvarchar" MaxLength="50" />
+          <Property Name="ID" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Orders">
           <Key>
@@ -37,8 +47,8 @@
           </Key>
           <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
           <Property Name="Name" Type="nchar" MaxLength="10" />
-          <Property Name="Category" Type="uniqueidentifier" />
-          <Property Name="CategoryID" Type="uniqueidentifier" />
+          <Property Name="imageurl" Type="nvarchar(max)" />
+          <Property Name="C_ID" Type="int" />
         </EntityType>
         <EntityType Name="Specifications">
           <Key>
@@ -105,7 +115,7 @@
               <PropertyRef Name="ID" />
             </Principal>
             <Dependent Role="Products">
-              <PropertyRef Name="CategoryID" />
+              <PropertyRef Name="C_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -122,6 +132,7 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="IdeaworkModelStoreContainer">
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Categories" EntityType="Self.Categories" Schema="user" store:Type="Tables" />
           <EntitySet Name="Orders" EntityType="Self.Orders" Schema="user" store:Type="Tables" />
           <EntitySet Name="OrdersProducts" EntityType="Self.OrdersProducts" Schema="user" store:Type="Tables" />
@@ -154,6 +165,7 @@
     <edmx:ConceptualModels>
       <Schema Namespace="IdeaworkModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="IdeaworkEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="sysdiagrams" EntityType="IdeaworkModel.sysdiagram" />
           <EntitySet Name="Categories" EntityType="IdeaworkModel.Category" />
           <EntitySet Name="Orders" EntityType="IdeaworkModel.Order" />
           <EntitySet Name="OrdersProducts" EntityType="IdeaworkModel.OrdersProduct" />
@@ -181,12 +193,22 @@
             <End Role="Specification" EntitySet="Specifications" />
           </AssociationSet>
         </EntityContainer>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
         <EntityType Name="Category">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="Guid" Nullable="false" />
           <Property Name="Category1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Products" Relationship="IdeaworkModel.FK_Products_Categories" FromRole="Category" ToRole="Product" />
         </EntityType>
         <EntityType Name="Order">
@@ -218,9 +240,9 @@
           </Key>
           <Property Name="ID" Type="Guid" Nullable="false" />
           <Property Name="Name" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="Category" Type="Guid" />
-          <Property Name="CategoryID" Type="Guid" />
-          <NavigationProperty Name="Category1" Relationship="IdeaworkModel.FK_Products_Categories" FromRole="Product" ToRole="Category" />
+          <Property Name="imageurl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="C_ID" Type="Int32" />
+          <NavigationProperty Name="Category" Relationship="IdeaworkModel.FK_Products_Categories" FromRole="Product" ToRole="Category" />
           <NavigationProperty Name="Specifications" Relationship="IdeaworkModel.FK_Specifications_Products" FromRole="Product" ToRole="Specification" />
         </EntityType>
         <EntityType Name="Specification">
@@ -255,7 +277,7 @@
               <PropertyRef Name="ID" />
             </Principal>
             <Dependent Role="Product">
-              <PropertyRef Name="CategoryID" />
+              <PropertyRef Name="C_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -307,17 +329,28 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="IdeaworkModelStoreContainer" CdmEntityContainer="IdeaworkEntities">
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="IdeaworkModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Categories">
             <EntityTypeMapping TypeName="IdeaworkModel.Category">
               <MappingFragment StoreEntitySet="Categories">
-                <ScalarProperty Name="Category1" ColumnName="Category" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Category1" ColumnName="Category" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -345,8 +378,8 @@
           <EntitySetMapping Name="Products">
             <EntityTypeMapping TypeName="IdeaworkModel.Product">
               <MappingFragment StoreEntitySet="Products">
-                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
-                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="C_ID" ColumnName="C_ID" />
+                <ScalarProperty Name="imageurl" ColumnName="imageurl" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>

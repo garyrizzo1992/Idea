@@ -1,11 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="IdeaworkModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
   <EntityType Name="Categories">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
     <Property Name="Category" Type="nvarchar" MaxLength="50" />
+    <Property Name="ID" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Orders">
     <Key>
@@ -32,8 +42,8 @@
     </Key>
     <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
     <Property Name="Name" Type="nchar" MaxLength="10" />
-    <Property Name="Category" Type="uniqueidentifier" />
-    <Property Name="CategoryID" Type="uniqueidentifier" />
+    <Property Name="imageurl" Type="nvarchar(max)" />
+    <Property Name="C_ID" Type="int" />
   </EntityType>
   <EntityType Name="Specifications">
     <Key>
@@ -100,7 +110,7 @@
         <PropertyRef Name="ID" />
       </Principal>
       <Dependent Role="Products">
-        <PropertyRef Name="CategoryID" />
+        <PropertyRef Name="C_ID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -117,6 +127,7 @@
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="IdeaworkModelStoreContainer">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Categories" EntityType="Self.Categories" Schema="user" store:Type="Tables" />
     <EntitySet Name="Orders" EntityType="Self.Orders" Schema="user" store:Type="Tables" />
     <EntitySet Name="OrdersProducts" EntityType="Self.OrdersProducts" Schema="user" store:Type="Tables" />

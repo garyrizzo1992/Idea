@@ -5,6 +5,7 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="f0438513bc464308ac59130781d321b7" Name="Diagram1">
+        <EntityTypeShape EntityType="IdeaworkModel.sysdiagram" Width="1.5" PointX="7.75" PointY="4.75" />
         <EntityTypeShape EntityType="IdeaworkModel.Category" Width="1.5" PointX="0.75" PointY="1.25" />
         <EntityTypeShape EntityType="IdeaworkModel.Order" Width="1.5" PointX="5.25" PointY="5.25" />
         <EntityTypeShape EntityType="IdeaworkModel.OrdersProduct" Width="1.5" PointX="7.5" PointY="0.875" />

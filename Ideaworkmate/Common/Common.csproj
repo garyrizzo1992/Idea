@@ -82,6 +82,9 @@
     <Compile Include="Specification.cs">
       <DependentUpon>IdeaworkmateModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>IdeaworkmateModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="User.cs">
       <DependentUpon>IdeaworkmateModel.tt</DependentUpon>
     </Compile>

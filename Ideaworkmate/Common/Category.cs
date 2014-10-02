@@ -19,8 +19,8 @@ namespace Common
             this.Products = new HashSet<Product>();
         }
     
-        public System.Guid ID { get; set; }
         public string Category1 { get; set; }
+        public int ID { get; set; }
     
         public virtual ICollection<Product> Products { get; set; }
     }
